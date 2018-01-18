@@ -84,9 +84,9 @@ struct st_mem_root
     min_malloc(0) // for alloc_root_inited()
   {}
 
-  st_mem_root(PSI_memory_key key, size_t block_size, size_t pre_alloc_size)
+  st_mem_root(PSI_memory_key key, size_t _block_size, size_t pre_alloc_size)
   {
-    init_alloc_root(key, this, block_size, pre_alloc_size);
+    init_alloc_root(key, this, _block_size, pre_alloc_size);
   }
 
   // Make the class movable but not copyable.
